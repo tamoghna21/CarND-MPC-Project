@@ -11,4 +11,4 @@ Model Predictive control transforms a tracking problem into a Optimal Control Pr
 [image2]: ./mpc_ss2.png "mpc car2"
 [image3]: ./mpc_ss3.png "mpc car3"
 
-### Details about the control states and algorithm can be found [here].(https://github.com/tamoghna21/CarND-MPC-Project/blob/master/writeup.md)
+### Details about the control states and algorithm can be found [here](https://github.com/tamoghna21/CarND-MPC-Project/blob/master/writeup.md).
