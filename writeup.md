@@ -14,7 +14,15 @@ Self-Driving Car Engineer Nanodegree Program
 
 ## The Model
 
-* The kinematic model of the car considered in this project has six states [x,y,ψ,v,cte,eψ]
+The kinematic model of the car considered in this project has six states [x,y,ψ,v,cte,eψ].
+* x, y and ψ denote the position and orientation angle(in radian) of the car in 2D plane.
+* v is the speed of the car in heading direction.
+* cte is for cross track error, the deviation of the car's y coordiate from ref trajectory.
+* eψ is the deviation of the car's orientation from the reference orientation.
+
+Two cotrol inputs are considered in the model, steering input δ and throttle input a. Steering input has limit of [-25 deg, 25 deg]. Throttle input a is for both accelerator and the brake; positive for acceleration and negetive for braking. The limits on a is [-1, 1].
+
+The state update equations for the model are:
 
 ![alt text][image1]
 
