@@ -12,7 +12,7 @@ Model Predictive control transforms a tracking problem into a Optimal Control Pr
 [image3]: ./mpc_ss3.png "mpc car3"
 
 ### Model Predictive Control
-** Details about the control states and algorithm can be found [here](https://github.com/tamoghna21/CarND-MPC-Project/blob/master/writeup.md).
+* Details about the control states and algorithm can be found [here](https://github.com/tamoghna21/CarND-MPC-Project/blob/master/writeup.md). The car drives itself across the entire circuit and always maintaining the required trajectory, on the drivable part of the road. :)
 
 ![alt text][image1]
 
@@ -25,3 +25,8 @@ Model Predictive control transforms a tracking problem into a Optimal Control Pr
 ![alt text][image3]
 
 
+Here's a video of the performance of MPC algorithm in the simulator [link to my video result][video1]
+
+
+
+#### For instructions related to environment setup and the simulator, please see [this one](https://github.com/tamoghna21/CarND-MPC-Project/blob/master/README_udacity.md).
