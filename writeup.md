@@ -3,9 +3,7 @@ Self-Driving Car Engineer Nanodegree Program
 
 [//]: # (Image References)
 
-[video1]: ./video_output/driving_P_control.mov "VideoP"
-[video2]: ./video_output/driving_PD_control.mov "VideoPD"
-[video3]: ./video_output/driving_PID_full.mov "VideoPID"
+[video1]: ./video_output/MPC_control.mov "VideoMPC"
 [image1]: ./equations/eq1.png "eq1"
 [image2]: ./equations/eq2.png "eq2"
 [image3]: ./equations/eq3.png "eq3"
@@ -36,16 +34,22 @@ The state update equations for the model are:
 
 Here's he video for P implementation [link to my video result][video1]
 
-* The D part of the controller compensates for the change in CTE in each step. That helps to damp down the oscillation of the car movement in the simulator.
+## Timestep Length and Elapsed Duration (N & dt)
 
-Here's he video for PD implementation [link to my video result][video2]
+The value of the number of steps (N) is chosen as 10 and the time duration between actuations (dt) is chosen as 0.1 sec. So, total time horizon is 10 * 0.1 sec = 1 sec. At fast speed of the car, especially at turns, trying to predict the environment of the car at more than 1 sec in the future is not realistic. dt is chosen 0.1 sec, because from MPC perspective, dt should be as less as possible and we are assuming 100ms latency for actuation commands.
+Other values tried for (N,dt) are (25,0.1), (25,0.05) , (20,0.1).
+
+## Polynomial Fitting and MPC Preprocessing
+
+The waypoints provided by the simulator is fitted to a third degree polynomial.
+
+Before fitting the polynomial, the waypoints, which are in global coordinate system, are transformed into car's local coordinate system. Then cte and eψ is calculated.
+To account for the latency of actuation commands, the six state values have been subjected to the state update equations described above for a duration of 100ms to calculate the delayed state values, which are fed into the MPC algorithm.
 
 
-* I part of the controller compensates for the steady state error due to any unknown disturbances in the car model etc. In this case, it can take care of steering drift, for example.
+## Model Predictive Control with Latency
 
-Here's he video for PID implementation [link to my video result][video3]
+As described above, to deal with the latency of 100ms, the state update equations were applied on the current state values. That gives the state values delayed by 100ms. Then the MPC calculates the optimum steering command δ  and throttle input a.
 
-## How the final hyperparameters were chosen.
 
-* I tuned the parameters manually. I first tuned the P parameter so that the car is at least compensating for the CTE. Then the car starts moving jittery way. Then I choose the D parameter to make sure the car moves straight at straight stretches of the road. Then I tuned the I parameter, so that the car is at the center of the lane, especially at the curves, because the car tends to out of the center of the lane due to unknown disturbaces in the car.
-
+Here's a video of the performance of MPC algorithm in the simulator [link to my video result][video1]
