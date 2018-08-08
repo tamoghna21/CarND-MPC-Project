@@ -29,4 +29,6 @@ Here's a video of the performance of MPC algorithm in the simulator [link to my 
 
 
 
-#### For instructions related to environment setup and the simulator, please see [this one](https://github.com/tamoghna21/CarND-MPC-Project/blob/master/README_udacity.md).
+
+
+### For instructions related to environment setup and the simulator, please see [this one](https://github.com/tamoghna21/CarND-MPC-Project/blob/master/README_udacity.md).
