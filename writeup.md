@@ -12,9 +12,14 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 
-## Effect each of the P, I, D components had in my implementation.
+## The Model
 
-* Effect of P part of the controller is to compensate for the CTE of the car, but doing so, it easily overshoots the car from its desired trajectory. In the sumulator, that makes the movement of the car too much jittery.
+* The kinematic model of the car considered in this project has six states [x,y,ψ,v,cte,eψ]
+
+[image1]
+[image2]
+[image3]
+
 
 Here's he video for P implementation [link to my video result][video1]
 
