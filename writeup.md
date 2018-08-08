@@ -32,8 +32,6 @@ The state update equations for the model are:
 
 
 
-Here's he video for P implementation [link to my video result][video1]
-
 ## Timestep Length and Elapsed Duration (N & dt)
 
 The value of the number of steps (N) is chosen as 10 and the time duration between actuations (dt) is chosen as 0.1 sec. So, total time horizon is 10 * 0.1 sec = 1 sec. At fast speed of the car, especially at turns, trying to predict the environment of the car at more than 1 sec in the future is not realistic. dt is chosen 0.1 sec, because from MPC perspective, dt should be as less as possible and we are assuming 100ms latency for actuation commands.
