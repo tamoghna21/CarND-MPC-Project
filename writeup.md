@@ -16,9 +16,14 @@ Self-Driving Car Engineer Nanodegree Program
 
 * The kinematic model of the car considered in this project has six states [x,y,ψ,v,cte,eψ]
 
-[image1]
-[image2]
-[image3]
+![alt text][image1]
+
+
+![alt text][image2]
+
+
+![alt text][image3]
+
 
 
 Here's he video for P implementation [link to my video result][video1]
