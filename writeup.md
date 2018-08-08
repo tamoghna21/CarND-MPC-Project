@@ -7,8 +7,8 @@ Self-Driving Car Engineer Nanodegree Program
 [video2]: ./video_output/driving_PD_control.mov "VideoPD"
 [video3]: ./video_output/driving_PID_full.mov "VideoPID"
 [image1]: ./equations/eq1.png "eq1"
-[image2]: ./equations/eq1.png "eq2"
-[image3]: ./equations/eq1.png "eq3"
+[image2]: ./equations/eq2.png "eq2"
+[image3]: ./equations/eq3.png "eq3"
 
 ---
 
