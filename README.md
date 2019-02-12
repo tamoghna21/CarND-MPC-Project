@@ -27,7 +27,7 @@ Model Predictive control transforms a tracking problem into a Optimal Control Pr
 ![alt text][image3]
 
 
-* [Here's a video of the performance of MPC algorithm in the simulator][video1]
+* [Here's a video of the performance of MPC algorithm in the simulator](https://youtu.be/CmPTJ247wMA)
 
 
 
